@@ -74,7 +74,7 @@ const UsersList = () => {
         <table border="1" cellPadding="5" style={{ marginTop: '20px' }}>
           <thead>
             <tr>
-              <th>No.</th><th>Name</th><th>Email</th><th className="delete">Actions</th>
+              <th>No.</th><th>Name</th><th>Email</th><th className="delete">Remove</th>
             </tr>
           </thead>
           <tbody>
