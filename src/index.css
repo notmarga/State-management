@@ -6,8 +6,240 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  min-height: 100vh;  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* Para simula sa taas */
+  background-color: #485F89; /* Background na hindi gumagalaw */
+  padding: 40px 20px;
+}
+
+.box{
+  max-width:90%;
+  margin: 30px auto;
+  padding: 40px;
+  border: 3px solid;
+  border-radius: 10px;
+  background: #6D7FA1;
+  box-shadow: 5px 6px rgba(0, 0, 0, 0.1);
+}
+.container-box{
+  max-width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #B6BFD0;
+  box-shadow:  0 8px rgba(5, 5, 5, 0.1);
+}
+h1{
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+}
+/* Title */
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #001b36;
+  margin-bottom: 10px;
+}
+/* Input Fields */
+.input-box {
+  background-color: #919FB8;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 10px;
+  margin: 6px 5px;
+  border-radius: 6px;
+  border: 1px solid #0f0f0f;
+  width: calc(33% - 50px);
+  box-sizing: border-box;
+}
+/* Add Button */
+.add-button {
+  align-content: center;
+  text-align: right;
+  padding: 10px 30px;
+  background-color: #485F89;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #2980b9;
+}
+.search-button{
+  background-color: #919FB8;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 10px;
+  width: 98%;
+  height: 25px;
+  border-radius: 10px;
+  margin-top: 20px; 
+}
+::placeholder{
+  color: white;
+  font-size: 17px;
+  font-weight: bold
+}
+button{
+  text-align: center;
+  padding: 6px 20px;
+  margin-top: 10px;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* Table */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border: 2px solid;
+}
+th {
+  background-color: #485F89;
+  color: white;
+  padding: 10px;
+}
+td {
+  text-align: center;
+  padding: 10px;
+  border-top: 4px solid #6D7FA1;
+}
+td button {
+  background-color: #FCD1AE;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+td button:hover {
+  background-color: #6D7FA1;
+}
+/* Spinner Style */
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #db1507;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media (max-width: 1024px){
+  .App{
+    padding: 30px;
+  }
+  .box{
+    width: 100%;
+  }
+  .container-box{
+    width: 100%;
+  }
+  h1{
+    font-size: 60px;
+  }
+  .input-box {
+    font-size: 15px;
+    margin: 2px 3px;
+    border-radius: 6px;
+    width: calc(33% - 30px);
+  }
+  .add-button{
+    padding: 10px 2px;
+    font-size: 15px;
+  }
+  .search-button{
+    width: 95%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  table {
+    width: 100%;
+    margin-top: 10px;
+  }
+  th {
+    font-size: 14px;
+  }
+  td{
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .App{
+    padding: 9px;
+  }
+  .box{
+    padding: 20px;
+    margin-top: 25px;
+  }
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-box {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .add-button {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+  table {
+    width: 100%;
+  }
+  td {
+    word-break:break-all;
+    font-size: 13px;
+    padding: 2px;
+    align-items: stretch;
+  }
+  td button{
+    word-break:normal ;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  table {
+    font-size: 1px;
+    word-break: break-word;
+  }
+  th {
+    word-break: normal;
+    font-size: 11px;
+  }
+  td{
+    word-break: break-all;
+    text-align: left;
+    font-size: 13px;
+  }
+  td button{
+    word-break: normal;
+    text-align: left;
+    font-size:10px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+} 
